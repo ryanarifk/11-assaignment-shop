@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom || Document object model</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+         h1{
+            color: rgb(214, 115, 80);
+         }
+         .fruits-container li{
+            color: blueviolet;
+         }
+    </style>
+</head>
+<body>
+     <h1 id="text-title" class="some-text some-bg">Hello world</h1>
+    <h1 class="">dom de re baba</h1>
+    <p class="some-text">Hello every one nice to meet you</p>
+    <section id="tourist-places" class="text-large">
+        <h1>Our tour List</h1>
+        <li class="tour-places">bandorbon</li>
+        <li class="tour-places">korachi</li>
+        <li class="tour-places">sundorbon</li>
+        <li>khagrasori</li>
+    </section> 
+
+    <section class="fruits-container">
+         <h1>I like fruits</h1>
+         <ul>
+            <li>Apple</li>
+            <li class="fruits-items">Apple</li>
+            <li class="fruits-items">Orenged</li>
+            <li class="fruits-items">Mannggo</li>
+            <li>Banana</li>
+         </ul>
+    </section>
+
+        <!-- intarnal javascript  -->
+         <script>
+              const places =document.getElementsByClassName('tour-places');
+              for(const place of places){
+                console.log(place.innerText);
+              }
+
+
+              const fruits =document.getElementsByClassName('fruits-items');
+            //   console.log(fruits)
+
+            for(const fruit of fruits){
+                console.log(fruit);
+            }
+
+            // querySelectorAll
+            const someLi=document.querySelectorAll('.fruits-container li');
+            // console.log(fruitsContainer)
+            for(const li of someLi){
+                console.log(li.innerText);
+            }
+
+            const div=document.getElementsByClassName('fruits-container');
+            div.innerHtml;
+
+            console.log(div[0]);
+         </script>
+         <script src="stylein.js"></script>
+</body>
+</html>
